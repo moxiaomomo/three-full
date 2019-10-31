@@ -1,4 +1,4 @@
-## three-full
+## three-full (tested on r108)
 A quick way to gather all example modules of threejs
 
 ## Processing steps
