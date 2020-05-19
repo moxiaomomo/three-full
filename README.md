@@ -36,7 +36,7 @@ https://github.com/mrdoob/three.js/issues/17409
 ```shell
 cd node_modules/three
 egrep "export (const|function|class|interface)" examples/* -nr | grep "\.d\.ts" | egrep -v "\/GLTFLoader|\/VTKLoader|\/XLoader|\/TessellateModifier|\/Water2|\/BokehShader2|\/TextureCubeUVNode|\/TextureCubeNode|\/SubSlot" | awk -F: '{print $1}' | sed s/\.d\.ts//g | sort | uniq | awk '{print "export * from '\''three/" $1 "'\'';"}' > /yourpath/somefile.ts
-egrep "export (const|function|class|interface)" srx/extras/* -nr | grep "\.d\.ts" | awk -F: '{print $1}' | sed s/\.d\.ts//g | sort | uniq | awk '{print "export * from '\''three/" $1 "'\'';"}' >> /yourpath/somefile.ts
+egrep "export (const|function|class|interface)" src/extras/* -nr | grep "\.d\.ts" | awk -F: '{print $1}' | sed s/\.d\.ts//g | sort | uniq | awk '{print "export * from '\''three/" $1 "'\'';"}' >> /yourpath/somefile.ts
 ```
 
 - 2. Add the remaining modules to /yourpath/somefile.ts
